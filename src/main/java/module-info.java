@@ -7,4 +7,6 @@ module com.example.harry_said_chaoui_fx {
 
     opens com.example.harry_said_chaoui_fx to javafx.fxml;
     exports com.example.harry_said_chaoui_fx;
+    exports com.example.harry_said_chaoui_fx.controllers;
+    opens com.example.harry_said_chaoui_fx.controllers to javafx.fxml;
 }

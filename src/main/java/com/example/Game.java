@@ -17,14 +17,6 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Load the FXML file
-        Parent root = FXMLLoader.load(getClass().getResource("harry_said_chaoui_fx/hello-view.fxml"));
-        // Create a new scene with the FXML file as the root node
-        Scene scene = new Scene(root);
-
-        // Set the scene on the primary stage
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Harry Potter Game");
         primaryStage.show();
     }
 
