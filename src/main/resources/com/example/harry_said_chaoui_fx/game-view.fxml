@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.harry_said_chaoui_fx.controllers.GameController">
+    <children>
+        <AnchorPane fx:id="screenelements" prefHeight="500.0" prefWidth="900.0">
+            <children>
+                <VBox alignment="CENTER" layoutX="90.0" layoutY="70.0" spacing="20.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Welcome To Harry Potter At Home" textAlignment="CENTER" textFill="#ac1010">
+                            <font>
+                                <Font name="Viner Hand ITC" size="48.0" />
+                            </font>
+                        </Label>
+                        <Button cache="true" mnemonicParsing="false" onAction="#startGame" text="Start The Game" textFill="#8f5454" textOverrun="CENTER_WORD_ELLIPSIS">
+                            <font>
+                                <Font name="Vladimir Script" size="41.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                            </padding>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </AnchorPane>
+    </children>
+</AnchorPane>

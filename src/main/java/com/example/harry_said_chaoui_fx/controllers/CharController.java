@@ -1,11 +1,13 @@
 package com.example.harry_said_chaoui_fx.controllers;
 
 import com.example.Game;
+import com.example.harry_said_chaoui_fx.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -17,23 +19,13 @@ public class CharController {
     private TextField nameField;
 
     @FXML
-    protected void submitName(ActionEvent actionEvent) {
+    protected void submitName(ActionEvent actionEvent) throws IOException {
         String name = nameField.getText();
-        System.out.println("The user entered: " + name);
+        System.out.println(name);
 
-        // Vous pouvez maintenant utiliser la variable 'name' pour initialiser votre jeu
-        Game game = new Game();
-        game.startGame();
 
-        // Chargement de la nouvelle scène
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("register.fxml"));
-            Parent pane = fxmlLoader.load();
-            Scene scene = new Scene(pane);
-            Stage stage = (Stage) nameField.getScene().getWindow();
-            stage.setScene(scene);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("game-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        ((Stage) ((Button) actionEvent.getSource()).getScene().getWindow()).setScene(scene);
     }
 }

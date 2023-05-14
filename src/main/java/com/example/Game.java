@@ -1,5 +1,6 @@
 package com.example;
 
+import com.example.harry_said_chaoui_fx.controllers.GameController;
 import com.example.model.character.Wizard;
 import com.example.model.levels.*;
 import com.example.model.misc.SortingHat;
@@ -17,6 +18,14 @@ public class Game extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("game-view.fxml"));
+        Parent root = loader.load();
+
+        GameController gameController = loader.getController();
+        gameController.setGame(this);
+
+        primaryStage.setTitle("Harry Potter RPG");
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
@@ -58,4 +67,14 @@ public class Game extends Application {
 
         System.out.println("Congratulations! You are now a true wizard !");
     }
+
+    public void startLevel() {
+        // Code pour commencer un niveau
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
 }
